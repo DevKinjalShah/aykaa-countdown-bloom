@@ -5,14 +5,14 @@ import pastelBackground from '@/assets/pastel-hero-background.jpg';
 import { Sparkles, Heart, Crown } from 'lucide-react';
 
 const Index = () => {
+  console.log('pastelBackground:', pastelBackground); // Debug log
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background */}
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
-          style={{ backgroundImage: `url(${pastelBackground})` }}
+          className="absolute inset-0 bg-gradient-to-br from-accent/5 via-background to-secondary/5"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/90 to-background/95" />
         
@@ -68,12 +68,7 @@ const Index = () => {
       {/* Waitlist Section */}
       <section className="py-20 bg-gradient-to-b from-card/30 to-background relative">
         {/* Decorative background */}
-        <div className="absolute inset-0 opacity-5">
-          <div 
-            className="w-full h-full bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: `url(${pastelBackground})` }}
-          />
-        </div>
+        <div className="absolute inset-0 bg-gradient-to-br from-accent/3 via-transparent to-secondary/3" />
         
         <div className="relative z-10 container mx-auto px-4">
           <WaitlistForm />
