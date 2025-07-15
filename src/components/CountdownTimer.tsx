@@ -43,14 +43,16 @@ const CountdownTimer = () => {
   const TimeUnit = ({ value, label }: { value: number; label: string }) => (
     <div className="flex flex-col items-center animate-fade-in">
       <div className="relative">
-        <div className="bg-gradient-to-br from-primary via-primary/90 to-primary/80 text-primary-foreground rounded-xl p-4 md:p-6 shadow-elegant border border-primary/20 min-w-[80px] md:min-w-[100px]">
-          <div className="text-3xl md:text-5xl font-bold text-center tabular-nums">
-            {value.toString().padStart(2, '0')}
+        <div className="bg-gradient-to-br from-primary via-primary/90 to-primary/80 text-primary-foreground rounded-xl p-4 md:p-6 shadow-soft border border-primary/20 min-w-[80px] md:min-w-[100px]">
+          <div className="text-3xl md:text-5xl font-bold text-center font-mono tracking-tight leading-none">
+            <span className="inline-block w-full transition-all duration-300 ease-in-out">
+              {value.toString().padStart(2, '0')}
+            </span>
           </div>
         </div>
-        <div className="absolute -inset-1 bg-gradient-to-br from-accent/20 to-secondary/20 rounded-xl blur opacity-75 animate-pulse-soft"></div>
+        <div className="absolute -inset-1 bg-gradient-to-br from-accent/10 to-secondary/10 rounded-xl blur opacity-50 animate-pulse-soft"></div>
       </div>
-      <span className="text-sm md:text-base font-medium text-muted-foreground mt-2 uppercase tracking-wider">
+      <span className="text-sm md:text-base font-medium text-muted-foreground mt-3 uppercase tracking-wider">
         {label}
       </span>
     </div>

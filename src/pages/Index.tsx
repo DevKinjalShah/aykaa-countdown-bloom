@@ -1,7 +1,7 @@
 import CountdownTimer from '@/components/CountdownTimer';
 import FounderStory from '@/components/FounderStory';
 import WaitlistForm from '@/components/WaitlistForm';
-import heroBackground from '@/assets/hero-background.jpg';
+import pastelBackground from '@/assets/pastel-hero-background.jpg';
 import { Sparkles, Heart, Crown } from 'lucide-react';
 
 const Index = () => {
@@ -12,7 +12,7 @@ const Index = () => {
         {/* Background */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
-          style={{ backgroundImage: `url(${heroBackground})` }}
+          style={{ backgroundImage: `url(${pastelBackground})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/90 to-background/95" />
         
@@ -71,7 +71,7 @@ const Index = () => {
         <div className="absolute inset-0 opacity-5">
           <div 
             className="w-full h-full bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: `url(${heroBackground})` }}
+            style={{ backgroundImage: `url(${pastelBackground})` }}
           />
         </div>
         
